@@ -25,9 +25,10 @@ func perm(a []rune, f func([]rune), i int) {
 
 func main() {
 	var letters = []rune("abc")
-	var sentence = fmt.Sprintf("Permutating %c:", letters)
+	var lettersString = string(letters[:])
+	var sentence = fmt.Sprintf("Permutating %s:", lettersString)
 	fmt.Println(sentence)
-	Perm(letters, func(a []rune) {
-		fmt.Println(string(a))
+	Perm(letters, func(b []rune) {
+		fmt.Println(string(b))
 	})
 }
